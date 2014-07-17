@@ -15,8 +15,10 @@ gem 'emblem-rails'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-group :development do
+group :development, :test do
   gem 'spring'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 # Use ActiveModel has_secure_password
