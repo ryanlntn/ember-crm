@@ -16,9 +16,12 @@ gem 'emblem-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'guard-bundler', '~> 2.0'
+  gem 'guard-rails', '~> 0.5'
+  gem 'guard-rspec', '~> 4.2'
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.4'
 end
 
 # Use ActiveModel has_secure_password
