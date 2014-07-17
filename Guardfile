@@ -2,7 +2,7 @@ guard :bundler do
   watch('Gemfile')
 end
 
-guard 'rails' do
+guard :rails do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end
@@ -22,4 +22,9 @@ guard :rspec, cmd: "bundle exec spring rspec" do
 
   # Capybara features specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1]}_spec.rb" }
+end
+
+guard :teaspoon do
+  watch(%r{^app/assets/javascripts/(.+).js}) { |m| "#{m[1]}_spec" }
+  watch(%r{^spec/javascripts/(.*)})
 end

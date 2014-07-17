@@ -30,6 +30,8 @@ group :development, :test do
   gem 'pry-rails', '>= 0.3.2'
   gem 'pry-rescue', '>= 1.4.1'
   gem 'spring-commands-rspec'
+  gem 'teaspoon', '~> 0.8'
+  gem 'guard-teaspoon', '~> 0.0.4'
   gem 'guard-bundler', '~> 2.0'
   gem 'guard-rails', '~> 0.5'
   gem 'guard-rspec', '~> 4.2'
