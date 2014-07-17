@@ -15,7 +15,20 @@ gem 'emblem-rails'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+group :development do
+  gem 'better_errors', '~> 1.1'
+  gem 'binding_of_caller', '~> 0.7', platforms: [ :mri_21 ]
+  gem 'quiet_assets', '~> 1.0'
+  gem 'rails_layout', '~> 1.0'
+  gem 'rb-fchange', '>= 0.0.6', require: false
+  gem 'rb-fsevent', '>= 0.9.4', require: false
+  gem 'rb-inotify', '>= 0.9.5', require: false
+  gem 'terminal-notifier-guard', ">= 1.5.3"
+end
+
 group :development, :test do
+  gem 'pry-rails', '>= 0.3.2'
+  gem 'pry-rescue', '>= 1.4.1'
   gem 'spring-commands-rspec'
   gem 'guard-bundler', '~> 2.0'
   gem 'guard-rails', '~> 0.5'
